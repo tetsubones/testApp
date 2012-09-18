@@ -3,12 +3,27 @@
 <meta charset="UTF-8">
 <head>
     <title>test:fb</title>
+<style type="text/css">
+    .scene {
+        display: none;
+    }
+
+</style>
 </head>
 <body>
 
-<div><button id="loginButton" value="login">login</button></div>
+<div id="logoutButton"><button value="logout">logout</button></div>
 
-<div><button id="logoutButton" value="logout">logout</button></div>
+<div id="view"></div>
+
+<div id="start" class="scene">
+    <pre>CBシミュレータを開始したことをFacebookに投稿しますか？（１．はい　２．いいえ）
+    ※ポップアップブロックを解除してください。</pre>
+</div>
+
+<div id="cb" class="scene">
+    <pre>チャンネルを選択してください。</pre>
+</div>
 
 
 <div id="fb-root"></div>

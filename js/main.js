@@ -76,7 +76,20 @@ function logout(){
 }
 //初期化
 function init() {
-    checkLoginStatus({ callback : login });
+
+    //とりあいずの画面遷移
+    $('#view').html($('#start').html());
+    $('#logoutButton button').click(function(){
+        logout();
+    });
+
+    $(window).bind('keypress',function(e){
+        if(e.keyCode === 49) {
+            checkLoginStatus({ callback : login });
+        } else if(e.keyCode === 50){
+            $('#view').html($('#cb').html())
+        }
+    });
 }
 init();
 
